@@ -1,23 +1,24 @@
 {
-  "name": "morse-practice",
-  "version": "1.0.0",
-  "description": "> **Free • Open Source • Browser-Based Morse Code Training Platform**",
-  "main": "server-vps.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "morse-practice-ru",
+  "version": "1.1.0-offline",
+  "description": "Offline Morse code / CW trainer with Russian alphabet support. Fork of ZP5DXS/morse-practice.",
+  "private": true,
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZP5DXS/morse-practice.git"
+    "url": "git+https://github.com/agenticaijs/morse-practice-ru.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://agenticaijs.github.io/morse-practice-ru/",
   "bugs": {
-    "url": "https://github.com/ZP5DXS/morse-practice/issues"
+    "url": "https://github.com/agenticaijs/morse-practice-ru/issues"
   },
-  "homepage": "https://github.com/ZP5DXS/morse-practice#readme",
-  "dependencies": {
-    "pg": "^8.23.1"
-  }
+  "keywords": [
+    "morse",
+    "cw",
+    "ham-radio",
+    "amateur-radio",
+    "koch",
+    "offline",
+    "russian"
+  ]
 }

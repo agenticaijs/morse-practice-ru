@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Learn Morse code and practice CW online for free. Bilingual English/Spanish trainer for amateur radio with Koch-style learning, listening, head copy, QSO practice, games, straight key and paddles.">
-<title>Morse Practice | Learn Morse Code & CW Online Free</title>
+<meta name="description" content="Learn Morse code and practice CW offline. English / Spanish / Russian trainer for amateur radio with Koch-style learning, listening, head copy, QSO practice, games, straight key and paddles. Fully offline after load.">
+<title>Morse Practice RU | Learn Morse Code & CW (Offline)</title>
 <!-- SEO / Social / Discovery -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -2071,8 +2071,50 @@ html[lang="ru"] #langToggle{opacity:.45}
 .ru-table-grid td.lat{font-weight:700}
 .ru-table-grid td.code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;font-size:17px}
 .ru-table-note{color:var(--muted);font-size:12px;margin:10px 0 0}
+
+/* === Offline-only fork (morse-practice-ru) === */
+#header73Text, .header-73-main, .like-btn, #siteLikeBtn, #footerLikeBtn,
+#siteStats, .site-stats, .site-stats-more, .global-stats-expanded, .global-stats-grid,
+.country-ticker, .country-ticker-track,
+.onair-head, #onAirPanel, #onAirKeyBadge, .onair-label, .online-badge,
+.game-ranking-access, .game-ranking-panel, .module-ranking-btn, .game-ranking-btn,
+#stableLikesFooter, #stableLikesLabel { display: none !important; visibility: hidden !important; height: 0 !important; overflow: hidden !important; margin: 0 !important; padding: 0 !important; border: none !important; }
+
 </style>
-<script src="https://unpkg.com/mqtt@5.15.2/dist/mqtt.min.js"></script>
+<!-- mqtt.js removed for offline-only build -->
+<script>
+
+/* === OFFLINE-ONLY BUILD (morse-practice-ru) ===
+   All external network features disabled: MQTT, Supabase stats,
+   likes/73, leaderboards, ON AIR, multiplayer DUEL presence, IP geolocation.
+   Local practice, games (single-player), Koch, QSO simulator, audio key remain fully functional.
+*/
+const OFFLINE_ONLY = true;
+// Stub mqtt so any residual references do not throw
+window.mqtt = window.mqtt || { connect: function(){ return {
+  on: function(){return this}, end: function(){}, publish: function(){}, subscribe: function(){},
+  connected: false
+}; } };
+
+// Prevent network calls
+const _origFetch = window.fetch;
+window.fetch = function(url, opts){
+  const u = String(url||'');
+  if (OFFLINE_ONLY && (
+    u.includes('practice-api.zp5dxs.org') ||
+    u.includes('api.country.is') ||
+    u.includes('ipwho.is') ||
+    u.includes('ipapi.co') ||
+    u.includes('broker.emqx.io') ||
+    u.includes('supabase')
+  )) {
+    return Promise.reject(new Error('offline-only: network blocked'));
+  }
+  return _origFetch.apply(this, arguments);
+};
+
+</script>
+
 
 <style>
 /* Countries are part of the always-visible main stats */
@@ -2334,8 +2376,8 @@ html[lang="ru"] #langToggle{opacity:.45}
   </div>
   <div class="top-controls">
     <div id="header73Cta" class="header-73-cta"><button id="header73Close" class="header-73-close" type="button" aria-label="Cerrar" title="Cerrar">×</button>
-      <div id="header73Text" class="header-73-main">TNX FER QSO · HPE CUAGN</div>
-      <button id="siteLikeBtn" class="like-btn" type="button">❤️ Send 73</button>
+      <div id="header73Text" class="header-73-main" style="display:none"></div>
+      <!-- like button removed for offline build -->
       <div id="header73Free" class="header-73-free">Gratuito · sin anuncios · código abierto</div>
       <div id="header73Tooltip" class="header-73-tooltip">Es gratis — mandá tu 73 ❤️</div>
     </div>
@@ -4195,7 +4237,7 @@ function scheduleCountryRefresh(){
   },600+Math.floor(Math.random()*900));
 }
 
-async function detectCountryByIP(force=false){
+async function detectCountryByIP(force=false){ if(typeof OFFLINE_ONLY!=="undefined"&&OFFLINE_ONLY){ return null; }
   if(detectedCountry&&!force){
     scheduleCountryRefresh();
     return detectedCountry;
@@ -4535,7 +4577,7 @@ function stableStatsCanWrite(){
       'practice-api.zp5dxs.org'
     ].includes(location.hostname.toLowerCase());
 }
-async function stableStatsRpc(name,args={}){
+async function stableStatsRpc(){ if(typeof OFFLINE_ONLY!=="undefined"&&OFFLINE_ONLY){ return null; }
   if(!stableStatsConfigured())throw new Error('Supabase stats not configured');
   const r=await fetch(`${SUPABASE_STATS_URL}/rest/v1/rpc/${name}`,{
     method:'POST',mode:'cors',cache:'no-store',keepalive:true,
@@ -5420,7 +5462,7 @@ function setupCommunity(){
   if(footerLikeBtn)footerLikeBtn.onclick=()=>sendSite73(footerLikeBtn);
   renderWeeklyLeaderboard();
 }
-function connectGlobalStats(){
+function connectGlobalStats(){ if(typeof OFFLINE_ONLY!=="undefined"&&OFFLINE_ONLY){ return; }
   setTimeout(()=>{generalLeaderboardLoading=false;renderWeeklyLeaderboard()},6500);
   try{
     const sid='mp_stats_'+crypto.getRandomValues(new Uint32Array(2)).join('_');
@@ -5738,7 +5780,7 @@ $("onlineList").addEventListener('click',e=>{
   updatePresenceUI();
 });
 
-function connectOnAir(){
+function connectOnAir(){ if(typeof OFFLINE_ONLY!=="undefined"&&OFFLINE_ONLY){ return; }
   if(onAir)return;
 
   // IMPORTANT: open immediately. Country lookup happens later and can never block ON AIR.

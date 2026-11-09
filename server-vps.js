@@ -1,3 +1,10 @@
+/**
+ * OFFLINE NOTE (morse-practice-ru):
+ * This file is kept only as a reference from the original project.
+ * The offline build does NOT use any backend. All network features
+ * (stats, likes, rankings, ON AIR, DUEL) are disabled in index.html.
+ * Do not deploy this server unless you intentionally restore online features.
+ */
 const http = require('http');
 const { Pool } = require('pg');
 
