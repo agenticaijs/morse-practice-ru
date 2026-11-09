@@ -2073,6 +2073,17 @@ html[lang="ru"] #langToggle{opacity:.45}
 .ru-table-note{color:var(--muted);font-size:12px;margin:10px 0 0}
 
 /* === Offline-only fork (morse-practice-ru) === */
+
+/* Hide network-only modules completely */
+.onair-box, .cwtv-box, .duel-box, .community-box, .bentwire-box,
+#desktopModules [data-module-id="onair"],
+#desktopModules [data-module-id="cwtv"],
+#desktopModules [data-module-id="duel"],
+#desktopModules [data-module-id="community"],
+#desktopModules [data-module-id="bentwire"] {
+  display: none !important;
+}
+
 #header73Count, .header-73-count { display: none !important; }
 
 .footer-community-title,
@@ -2451,7 +2462,7 @@ window.fetch = function(url, opts){
 
 
   <div class="invaders-box">
-    <div class="invaders-head"><div class="invaders-label">👾 CW INVADERS</div><label class="switch"><input id="invadersToggle" type="checkbox"><span></span></label></div>
+    <div class="invaders-head"><div class="invaders-label" title="Игра Invaders: TX или RX символов">👾 CW INVADERS</div><label class="switch"><input id="invadersToggle" type="checkbox"><span></span></label></div>
     <div id="invadersPanel" class="invaders-panel"><div class="invaders-card">
       <div class="invaders-tabs"><button id="invadersTxTab" class="invaders-tab active" type="button">TX</button><button id="invadersRxTab" class="invaders-tab" type="button">RX</button></div>
       <select id="invadersSet" class="invaders-select"><option value="letters">Letras A–Z</option><option value="numbers">Números 0–9</option><option value="mixed">Letras + números</option><option value="words">Palabras CW</option></select>
@@ -2486,7 +2497,7 @@ window.fetch = function(url, opts){
   
 <div class="learn-box">
   <div class="learn-head">
-    <div class="learn-label">🎓 <span data-i18n="learnModule">LEARN</span></div>
+    <div class="learn-label">🎓 <span data-i18n="learnModule" title="Посимвольное изучение азбуки Морзе">LEARN</span></div>
     <label class="switch"><input id="learnToggle" type="checkbox"><span></span></label>
   </div>
   <div id="learnPanel" class="learn-panel">
@@ -2507,7 +2518,7 @@ window.fetch = function(url, opts){
 
 <div class="listen-box">
   <div class="listen-head">
-    <div class="listen-label">🎧 <span data-i18n="listenModule">ESCUCHA</span></div>
+    <div class="listen-label">🎧 <span data-i18n="listenModule" title="Приём на слух: мгновенное распознавание символов">ESCUCHA</span></div>
     <label class="switch"><input id="listenToggle" type="checkbox"><span></span></label>
   </div>
   <div id="listenPanel" class="listen-panel">
@@ -2522,7 +2533,7 @@ window.fetch = function(url, opts){
 
 <div class="cw-timing-box">
   <div class="cw-timing-head">
-    <div class="cw-timing-label">🎚 <span id="cwTimingModuleLabel">CW TIMING</span></div>
+    <div class="cw-timing-label" title="Тренировка длительности точек и тире">🎚 <span id="cwTimingModuleLabel">CW TIMING</span></div>
     <label class="switch"><input id="cwTimingToggle" type="checkbox"><span></span></label>
   </div>
   <div id="cwTimingPanel" class="cw-timing-panel">
@@ -2534,7 +2545,7 @@ window.fetch = function(url, opts){
 
 <div class="exercises-box">
   <div class="exercises-head">
-    <div class="exercises-label">📝 <span data-i18n="exercisesModule">EJERCICIOS</span></div>
+    <div class="exercises-label">📝 <span data-i18n="exercisesModule" title="Ежедневные упражнения: разминка, задание, дрилл">EJERCICIOS</span></div>
     <label class="switch"><input id="exercisesToggle" type="checkbox"><span></span></label>
   </div>
   <div id="exercisesPanel" class="exercises-panel">
@@ -2552,7 +2563,7 @@ window.fetch = function(url, opts){
 
 <div class="battleship-box">
   <div class="battleship-head">
-    <div class="battleship-label">⚓ CW BATTLESHIP</div>
+    <div class="battleship-label" title="Игра «Морской бой» на коде Морзе">⚓ CW BATTLESHIP</div>
     <label class="switch"><input id="battleshipToggle" type="checkbox"><span></span></label>
   </div>
   <div id="battleshipPanel" class="battleship-panel">
@@ -2585,7 +2596,7 @@ window.fetch = function(url, opts){
 </div>
 <div class="cwracer-box">
   <div class="cwracer-head">
-    <div id="cwRacerLabel" class="cwracer-label"><span class="flag">🏁</span>CW RACER</div>
+    <div id="cwRacerLabel" class="cwracer-label" title="Гонка: приём символов на скорость"><span class="flag">🏁</span>CW RACER</div>
     <label class="switch"><input id="cwRacerToggle" type="checkbox"><span></span></label>
   </div>
   <div id="cwRacerPanel" class="cwracer-panel">
@@ -2650,7 +2661,7 @@ window.fetch = function(url, opts){
 
 <div class="cw-flappy-box">
   <div class="cw-flappy-head">
-    <div class="cw-flappy-label">🐦 <span id="cwFlappyModuleLabel">CW FLAPPY</span></div>
+    <div class="cw-flappy-label" title="Игра Flappy: управление кодом Морзе">🐦 <span id="cwFlappyModuleLabel">CW FLAPPY</span></div>
     <label class="switch"><input id="cwFlappyToggle" type="checkbox"><span></span></label>
   </div>
   <div id="cwFlappyPanel" class="cw-flappy-panel">
@@ -2664,7 +2675,7 @@ window.fetch = function(url, opts){
 
 <div class="stats-box">
   <div class="stats-head">
-    <div class="stats-label">📊 <span data-i18n="statsModule">ESTADÍSTICAS</span></div>
+    <div class="stats-label">📊 <span data-i18n="statsModule" title="Локальная статистика ошибок и активности">ESTADÍSTICAS</span></div>
     <label class="switch"><input id="statsToggle" type="checkbox"><span></span></label>
   </div>
   <div id="statsPanel" class="stats-panel">
@@ -2674,7 +2685,7 @@ window.fetch = function(url, opts){
 
 <div class="koch-box">
   <div class="koch-head">
-    <div id="kochLabel" class="koch-label"><span class="book">📚</span>KOCH COURSE</div>
+    <div id="kochLabel" class="koch-label" title="Курс Коха: постепенное изучение символов"><span class="book">📚</span>KOCH COURSE</div>
     <label class="switch"><input id="kochToggle" type="checkbox"><span></span></label>
   </div>
   <div id="kochPanel" class="koch-panel">
@@ -2697,7 +2708,7 @@ window.fetch = function(url, opts){
 
 <div class="qsobot-box">
     <div class="qsobot-head">
-      <div class="qsobot-label">🤖 QSO BOT</div>
+      <div class="qsobot-label" title="Локальный симулятор QSO с ботом">🤖 QSO BOT</div>
       <label class="switch"><input id="qsoBotToggle" type="checkbox"><span></span></label>
     </div>
     <div id="qsoBotPanel" class="qsobot-panel">
@@ -3086,7 +3097,7 @@ window.fetch = function(url, opts){
   </div>
 
   <div id="activityCustom" class="activity-view">
-    <div class="activity-hud"><span>🧠 <b data-i18n="personalPractice">PRÁCTICA LIBRE</b></span><span>📍 <b id="customLessonProgress">0/0</b></span></div>
+    <div class="activity-hud"><span>🧠 <b data-i18n="personalPractice" title="Свободная практика своим текстом">PRÁCTICA LIBRE</b></span><span>📍 <b id="customLessonProgress">0/0</b></span></div>
     <div class="activity-center">
       <div id="customLessonCurrent" class="activity-target activity-target-small">—</div>
       <div id="customLessonAttempt" class="activity-code activity-code-small">—</div>
@@ -3285,7 +3296,7 @@ window.fetch = function(url, opts){
   </div>
 </div>
 <div class="rewards-box">
-  <div class="rewards-head"><div class="rewards-label">🎁 <span data-i18n="rewards">REWARDS</span></div><label class="switch"><input id="rewardsToggle" type="checkbox"><span></span></label></div>
+  <div class="rewards-head"><div class="rewards-label" title="Награды и темы за локальные достижения">🎁 <span data-i18n="rewards" title="Награды и темы за локальные достижения">REWARDS</span></div><label class="switch"><input id="rewardsToggle" type="checkbox"><span></span></label></div>
   <div id="rewardsPanel" class="rewards-panel"><div class="rewards-summary"><span data-i18n="rewardsSub">Achievements unlock cosmetic rewards.</span><b id="rewardsCount">0 / 8</b></div>
     <div id="rewardGrid" class="reward-grid"></div>
     <div class="membership-box"><div class="membership-title" data-i18n="memberships">Community memberships</div>
@@ -11503,25 +11514,21 @@ updateOnAirVisual();
 
   // Default order chosen to put the most participatory / frequently-used
   // functions closest to the keying area.
+  // Offline build: network modules (ON AIR, CW TV, DUEL, LEADERBOARD, WORLD RECORD) removed
   const defs = [
-    {id:'onair',     selector:'.onair-box',        head:'.onair-head',                 title:'ON AIR'},
-    {id:'cwtv',      selector:'.cwtv-box',         head:'.cwtv-head',                  title:'CW TV'},
-    {id:'learn',     selector:'.learn-box',        head:'.learn-head',                 title:'LEARN'},
-    {id:'listen',    selector:'.listen-box',       head:'.listen-head',                title:'ESCUCHA / LISTEN'},
-    {id:'timing',    selector:'.cw-timing-box',    head:'.cw-timing-head',            title:'CW TIMING'},
-    {id:'koch',      selector:'.koch-box',         head:'.koch-head',                  title:'KOCH'},
-    {id:'exercises', selector:'.exercises-box',    head:'.exercises-head',             title:'EJERCICIOS'},
-    {id:'custom',    selector:'#customLessonBox',  head:':scope > .switchline',        title:'PRÁCTICA LIBRE'},
-    {id:'qso',       selector:'.qsobot-box',       head:'.qsobot-head',                title:'QSO BOT'},
-    {id:'stats',     selector:'.stats-box',        head:'.stats-head',                 title:'ESTADÍSTICAS'},
-    {id:'battleship',selector:'.battleship-box',   head:'.battleship-head',            title:'CW BATTLESHIP'},
-    {id:'bentwire',  selector:'.bentwire-box',     head:'.bentwire-head',              title:'WORLD RECORD'},
-    {id:'racer',     selector:'.cwracer-box',      head:'.cwracer-head',               title:'CW RACER'},
-    {id:'flappy',    selector:'.cw-flappy-box',    head:'.cw-flappy-head',            title:'CW FLAPPY'},
-    {id:'invaders',  selector:'.invaders-box',     head:'.invaders-head',              title:'CW INVADERS'},
-    {id:'duel',      selector:'.duel-box',         head:'.duel-head',                  title:'CW DUEL'},
-    {id:'community', selector:'.community-box',    head:'.community-head',             title:'LEADERBOARD'},
-    {id:'rewards',   selector:'.rewards-box',      head:'.rewards-head',               title:'RECOMPENSAS'}
+    {id:'learn',     selector:'.learn-box',        head:'.learn-head',                 title:'LEARN', tip:'Посимвольное изучение азбуки Морзе (латиница / кириллица)'},
+    {id:'listen',    selector:'.listen-box',       head:'.listen-head',                title:'ESCUCHA / LISTEN', tip:'Приём на слух: мгновенное распознавание символов (ICR)'},
+    {id:'timing',    selector:'.cw-timing-box',    head:'.cw-timing-head',            title:'CW TIMING', tip:'Тренировка длительности точек и тире (ритм ключа)'},
+    {id:'koch',      selector:'.koch-box',         head:'.koch-head',                  title:'KOCH', tip:'Курс Коха: постепенное изучение символов группами'},
+    {id:'exercises', selector:'.exercises-box',    head:'.exercises-head',             title:'EJERCICIOS', tip:'Ежедневные упражнения: разминка, задание, дрилл'},
+    {id:'custom',    selector:'#customLessonBox',  head:':scope > .switchline',        title:'PRÁCTICA LIBRE', tip:'Свободная практика: свой текст по символам или словам'},
+    {id:'qso',       selector:'.qsobot-box',       head:'.qsobot-head',                title:'QSO BOT', tip:'Локальный симулятор радиосвязи (QSO) с ботом'},
+    {id:'stats',     selector:'.stats-box',        head:'.stats-head',                 title:'ESTADÍSTICAS', tip:'Локальная статистика ошибок и активности (в браузере)'},
+    {id:'battleship',selector:'.battleship-box',   head:'.battleship-head',            title:'CW BATTLESHIP', tip:'Игра «Морской бой» на коде Морзе'},
+    {id:'racer',     selector:'.cwracer-box',      head:'.cwracer-head',               title:'CW RACER', tip:'Гонка: принимайте символы на скорость'},
+    {id:'flappy',    selector:'.cw-flappy-box',    head:'.cw-flappy-head',            title:'CW FLAPPY', tip:'Игра в стиле Flappy Bird, управление кодом Морзе'},
+    {id:'invaders',  selector:'.invaders-box',     head:'.invaders-head',              title:'CW INVADERS', tip:'Игра «Invaders»: передача или приём символов'},
+    {id:'rewards',   selector:'.rewards-box',      head:'.rewards-head',               title:'RECOMPENSAS', tip:'Награды и темы за локальные достижения'}
   ];
 
   const config = document.querySelector('.config');
@@ -11560,6 +11567,11 @@ updateOnAirVisual();
     node.dataset.desktopModule=d.id;
     node.classList.add('desktop-module');
     nodes.set(d.id,node);
+    if(d.tip){
+      node.title=d.tip;
+      const labelEl=node.querySelector(d.head);
+      if(labelEl) labelEl.title=d.tip;
+    }
 
     const head=node.querySelector(d.head);
     if(head&&!head.querySelector('.module-order-controls')){
