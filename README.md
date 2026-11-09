@@ -3682,3 +3682,14 @@ Keep CW alive.
 **Mathias Maidana — ZP5DXS 🇵🇾**
 
 *Learn CW. Practice CW. Send CW.*
+
+---
+
+## Русский / Russian support (fork)
+
+- **RU** button (top bar): Russian interface. Strings not translated fall back to English.
+- **A–Z ⇄ А–Я** switch: alphabet for training. In Cyrillic mode, Learn, Exercises (Racer), Koch course, Listen and CW Invaders use Russian letters.
+- **📋** button: Russian ⇄ Latin Morse conversion table.
+- The free keyer/decoder always recognizes both: it shows e.g. `К (K)`; codes with no Latin letter (Ч Ш Э Ю Я) are shown as Cyrillic. Typing Cyrillic text in the text box and pressing Play sends the correct Morse.
+- QSO Bot, Duel, Battleship, Flappy, Timing and Daily exercises remain Latin (ham radio content).
+- Koch order for Russian is the Latin order mapped by code (К М У Р Е С Н А П Т Л В И …); Ч Ш Ъ Э Ю Я are practiced in the letter sets.
