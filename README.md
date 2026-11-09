@@ -4,11 +4,11 @@
 
 🇪🇸 **¿Prefieres leer las instrucciones en español?** Consulta la [guía completa en español](README-ES.md).
 
-## 🚀 [TRY IT NOW — OPEN MORSE PRACTICE](https://zp5dxs.github.io/morse-practice/)
+## 🚀 [TRY IT NOW — OPEN MORSE PRACTICE](https://agenticaijs.github.io/morse-practice-ru/)
 
 > **No installation · No registration · 100% free · Start training directly in your browser.**
 
-[![Try Morse Practice](https://img.shields.io/badge/🚀_TRY_IT_NOW-MORSE_PRACTICE-2ea44f?style=for-the-badge)](https://zp5dxs.github.io/morse-practice/)
+[![Try Morse Practice](https://img.shields.io/badge/🚀_TRY_IT_NOW-MORSE_PRACTICE-2ea44f?style=for-the-badge)](https://agenticaijs.github.io/morse-practice-ru/)
 
 ## 🎥 Complete Morse Practice Tutorial
 
@@ -86,7 +86,7 @@ Leaderboard use lightweight shared realtime data only where needed.
 
 🌐 **Ready to practice?**
 
-### 🚀 [Click here to start training now](https://zp5dxs.github.io/morse-practice/)
+### 🚀 [Click here to start training now](https://agenticaijs.github.io/morse-practice-ru/)
 
 🎥 [Complete tutorial on YouTube](https://youtu.be/J2wu3eOUZkg)
 
@@ -357,7 +357,7 @@ sending practice environment.
 
 Simply visit:
 
-<https://zp5dxs.github.io/morse-practice/>
+<https://agenticaijs.github.io/morse-practice-ru/>
 
 Choose your preferred input method and start practicing immediately.
 
@@ -3653,7 +3653,7 @@ GitHub
 
 🌐 **Live Demo**
 
-<https://zp5dxs.github.io/morse-practice/>
+<https://agenticaijs.github.io/morse-practice-ru/>
 
 ------------------------------------------------------------------------
 

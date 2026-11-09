@@ -4,11 +4,11 @@
 
 🇬🇧 **English version:** consulta el [README principal en inglés](README.md).
 
-## 🚀 [PROBAR AHORA — ABRIR MORSE PRACTICE](https://zp5dxs.github.io/morse-practice/)
+## 🚀 [PROBAR AHORA — ABRIR MORSE PRACTICE](https://agenticaijs.github.io/morse-practice-ru/)
 
 > **Sin instalación · Sin registro · 100% gratis · Empieza a entrenar directamente en tu navegador.**
 
-[![Probar Morse Practice](https://img.shields.io/badge/🚀_PROBAR_AHORA-MORSE_PRACTICE-2ea44f?style=for-the-badge)](https://zp5dxs.github.io/morse-practice/)
+[![Probar Morse Practice](https://img.shields.io/badge/🚀_PROBAR_AHORA-MORSE_PRACTICE-2ea44f?style=for-the-badge)](https://agenticaijs.github.io/morse-practice-ru/)
 
 ## 🎥 Tutorial completo de Morse Practice
 
@@ -76,7 +76,7 @@ La mayor parte de los datos de entrenamiento permanece localmente en tu navegado
 
 🌐 **¿Listo para practicar?**
 
-### 🚀 [Haz clic aquí para entrenar ahora](https://zp5dxs.github.io/morse-practice/)
+### 🚀 [Haz clic aquí para entrenar ahora](https://agenticaijs.github.io/morse-practice-ru/)
 
 🎥 [Tutorial completo en YouTube](https://youtu.be/J2wu3eOUZkg)
 
@@ -319,7 +319,7 @@ El entrenador principal se puede utilizar simplemente como un oscilador CW o com
 
 Simplemente visita:
 
-[https://zp5dxs.github.io/morse-practice/](https://zp5dxs.github.io/morse-practice/)
+[https://agenticaijs.github.io/morse-practice-ru/](https://agenticaijs.github.io/morse-practice-ru/)
 
 Elige tu método de entrada preferido y comienza a practicar de inmediato.
 
@@ -3364,7 +3364,7 @@ GitHub
 
 🌐 **Demostración en vivo**
 
-[https://zp5dxs.github.io/morse-practice/](https://zp5dxs.github.io/morse-practice/)
+[https://agenticaijs.github.io/morse-practice-ru/](https://agenticaijs.github.io/morse-practice-ru/)
 
 ------------------------------------------------------------------------
 
