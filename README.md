@@ -1,63 +1,108 @@
-# 📡 Morse Practice RU (Offline Fork)
+# 📡 Morse Practice RU
 
-> **Free • Open Source • Browser-Based Morse Code Training Platform**  
-> Russian-alphabet support + fully offline (no external servers).
+> **Бесплатный офлайн-тренажёр азбуки Морзе (CW) в браузере — форк с поддержкой русского кода и русского интерфейса.**
 
-🇪🇸 [Español](README-ES.md) · 🇷🇺 [Русский](README-RU.md)
+🇬🇧 [English](README-EN.md) · 🇪🇸 [Español](README-ES.md)
 
-## 🚀 [TRY IT NOW](https://agenticaijs.github.io/morse-practice-ru/)
+## 🚀 [ОТКРЫТЬ ТРЕНАЖЁР](https://agenticaijs.github.io/morse-practice-ru/)
 
-> No installation · No registration · 100% free · **Works fully offline** after the first load.
+> Без установки · без регистрации · бесплатно · **работает полностью офлайн** после первой загрузки.
+> Можно установить как PWA-приложение на главный экран телефона и открывать без интернета.
 
-This is a fork of [**ZP5DXS/morse-practice**](https://github.com/ZP5DXS/morse-practice) by Mathias Maidana (ZP5DXS).  
-Original UI: English + Spanish. This fork adds Russian interface and Russian Morse alphabet support.  
-Original project remains under MIT license (see [LICENSE](LICENSE)).
+Это форк проекта [**ZP5DXS/morse-practice**](https://github.com/ZP5DXS/morse-practice) (автор — Mathias Maidana, ZP5DXS).  
+Оригинальный интерфейс — английский и испанский; здесь добавлена поддержка русского языка и русского телеграфного алфавита.  
+Все права на исходный проект принадлежат автору, лицензия — MIT (см. [LICENSE](LICENSE)).
 
-### Changes in this offline build
+### Что изменено в этом форке (офлайн-версия)
 
-- **Removed / disabled** all features that require third-party servers:
-  - Global visitor / country / practice-hour counters
-  - “73” likes and appreciation counter
-  - Weekly leaderboards and per-game rankings
-  - ON AIR shared channel (MQTT)
-  - Multiplayer DUEL matchmaking
-  - IP geolocation and remote stats API
-- **Kept** everything that runs locally in the browser: CW oscillator, decoder, straight key & paddles, Koch course, Listen, Racer, single-player games, local QSO simulator, custom lessons, local progress (localStorage), themes.
-- Added **RU** language button, **A–Z ⇄ А–Я** script toggle, Morse correspondence table, and dual-alphabet decoder.
-
-### How to use Russian mode
-
-1. Open the [trainer](https://agenticaijs.github.io/morse-practice-ru/).
-2. Press **RU** for Russian UI.
-3. Switch **A–Z ⇄ А–Я** to **А–Я** so practice modules use Cyrillic.
-4. Use the **📋** button for the Latin ↔ Russian Morse table.
-
-### What still works offline
-
-- CW sidetone, WPM, Farnsworth, band noise
-- Straight key & paddles (mouse, touch, USB HID)
-- Koch course, challenges, adaptive practice, custom lessons
-- Listen / head-copy
-- Racer, Invaders, Battleship, Timing, Flappy (single-player)
-- Local QSO bot simulator
-- Local error statistics and progress
-- Themes and most unlockable rewards that do not require network
-
-### What is disabled
-
-- Global stats and counters  
-- “Send 73” button  
-- Leaderboards / rankings  
-- ON AIR and network DUEL  
-- Any calls to `practice-api.zp5dxs.org` or public MQTT brokers  
-
-`server-vps.js` is kept only as a reference; it is **not used** by this build.
+- Удалены / отключены все функции, требующие сторонних серверов:
+  - глобальная статистика, счётчики посетителей и «73»
+  - рейтинги и weekly leaderboard
+  - ON AIR (общий эфир через MQTT)
+  - мультиплеерный DUEL (сетевой матчмейкинг)
+  - геолокация по IP и запись в внешнее API
+- Оставлено только то, что работает **локально в браузере** без интернета: осциллятор, декодер, ключ/пэддлы, Koch, Listen, Racer, QSO-симулятор, игры в одиночном режиме, кастомные уроки и т.д.
+- Добавлена поддержка русского алфавита и интерфейса (кнопка **RU**, переключатель **A–Z ⇄ А–Я**, таблица соответствия).
 
 ---
 
-## Credits & License
+## ✨ Что добавлено / доступно
 
-MIT. Original work © Mathias Maidana (ZP5DXS) — [ZP5DXS/morse-practice](https://github.com/ZP5DXS/morse-practice).  
-Fork: [agenticaijs/morse-practice-ru](https://github.com/agenticaijs/morse-practice-ru).
+| Возможность | Описание |
+|---|---|
+| **Кнопка RU** | Русский интерфейс (часть строк пока на английском). |
+| **A–Z ⇄ А–Я** | Алфавит для тренировок. В русском режиме на кириллицу переходят Learn, Exercises (Racer), Koch, Listen и CW Invaders. |
+| **Кнопка 📋** | Таблица соответствия русского и латинского кода Морзе. |
+| **Декодер** | Показывает букву и аналог: `К (K)` / `K (К)`. Коды Ч, Ш, Э, Ю, Я распознаются всегда. |
+| **Текст → CW** | Кириллица в поле текста воспроизводится правильным кодом (Ё = Е). |
+| **Полностью офлайн** | После загрузки страницы интернет не нужен. |
+| **PWA** | Устанавливается на главный экран телефона/десктопа, открывается без сети. Service Worker кэширует страницу. |
+| **3 языка** | Русский (по умолчанию), английский, испанский — переключаются в шапке. |
 
-73 and thanks to the original author.
+### Как пользоваться
+
+1. Откройте [страницу тренажёра](https://agenticaijs.github.io/morse-practice-ru/) — по умолчанию интерфейс на русском.
+2. При желании переключите язык кнопками **RU / EN / ES** в шапке.
+3. При выборе русского языка алфавит автоматически переключается на **А–Я** (для возврата к латинице — кнопка **A–Z ⇄ А–Я**).
+4. Кнопка **📋** открывает таблицу соответствия русского и латинского кода.
+5. В поле «Позывной» введите свой радиолюбительский позывной — он используется QSO-ботом и локальной статистикой (никуда не отправляется).
+
+---
+
+## 📋 Таблица соответствия русского и латинского кода
+
+Коды большинства русских и латинских букв совпадают.
+
+| Рус | Лат | Код | | Рус | Лат | Код |
+|---|---|---|---|---|---|---|
+| А | A | ·− | | Р | R | ·−· |
+| Б | B | −··· | | С | S | ··· |
+| В | W | ·−− | | Т | T | − |
+| Г | G | −−· | | У | U | ··− |
+| Д | D | −·· | | Ф | F | ··−· |
+| Е (Ё) | E | · | | Х | H | ···· |
+| Ж | V | ···− | | Ц | C | −·−· |
+| З | Z | −−·· | | Ч | — | −−−· |
+| И | I | ·· | | Ш | — | −−−− |
+| Й | J | ·−−− | | Щ | Q | −−·− |
+| К | K | −·− | | Ъ | — (Ñ) | −−·−− |
+| Л | L | ·−·· | | Ы | Y | −·−− |
+| М | M | −− | | Ь | X | −··− |
+| Н | N | −· | | Э | — | ··−·· |
+| О | O | −−− | | Ю | — | ··−− |
+| П | P | ·−−· | | Я | — | ·−·− |
+
+Цифры и знаки препинания в русском и латинском совпадают.
+
+---
+
+## Что осталось локальным (работает офлайн)
+
+- Осциллятор CW, регулировка WPM, Farnsworth, шум эфира
+- Прямой ключ и пэддлы (мышь, тач, USB HID)
+- Курс Koch, Challenges, Adaptive, Custom Lessons
+- Listen / Head-copy
+- Racer, Invaders, Battleship, Timing, Flappy и др. в одиночном режиме
+- Симулятор QSO (локальный бот)
+- Локальная статистика ошибок и прогресс (localStorage)
+- Темы оформления и награды, не требующие сети
+
+## Что отключено
+
+- Глобальные счётчики посетителей / стран / часов практики
+- Кнопка «❤️ Send 73» и счётчик 73
+- Weekly Leaderboard и рейтинги игр
+- ON AIR (общий канал)
+- Сетевой DUEL
+- Запись статистики на сервер автора
+
+Файл `server-vps.js` удалён из репозитория — статический фронтенд не нуждается в сервере.
+
+---
+
+## Лицензия и благодарности
+
+MIT. Оригинальный проект — [ZP5DXS/morse-practice](https://github.com/ZP5DXS/morse-practice) © Mathias Maidana (ZP5DXS).  
+Форк: [agenticaijs/morse-practice-ru](https://github.com/agenticaijs/morse-practice-ru).
+
+Если вы используете тренажёр — 73 и спасибо автору оригинала.

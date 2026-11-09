@@ -1,0 +1,45 @@
+{
+  "name": "Morse Practice RU — тренажёр азбуки Морзе",
+  "short_name": "Morse Practice RU",
+  "description": "Офлайн-тренажёр азбуки Морзе (CW) с поддержкой русского языка и русского телеграфного алфавита. Koch-курс, QSO-бот, игры, прямой ключ и пэддл.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0d10",
+  "theme_color": "#0b0d10",
+  "categories": ["education", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='32' fill='%230b0d10'/><text x='96' y='130' font-size='120' text-anchor='middle' fill='%23e53935' font-family='monospace' font-weight='900'>·−</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='64' fill='%230b0d10'/><text x='256' y='340' font-size='320' text-anchor='middle' fill='%23e53935' font-family='monospace' font-weight='900'>·−</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Курс Koch",
+      "short_name": "Koch",
+      "url": "./index.html#koch"
+    },
+    {
+      "name": "QSO-бот",
+      "short_name": "QSO",
+      "url": "./index.html#qso"
+    },
+    {
+      "name": "Статистика",
+      "short_name": "Статистика",
+      "url": "./index.html#stats"
+    }
+  ]
+}

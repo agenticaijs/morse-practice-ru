@@ -1,13 +1,14 @@
 # 📡 Morse Practice RU (Versión offline)
 
 > **Gratis • Código abierto • Entrenador de código Morse en el navegador**  
-> Soporte de alfabeto ruso + completamente offline (sin servidores externos).
+> Soporte de alfabeto ruso + completamente offline (sin servidores externos). Instalable como PWA.
 
-🇬🇧 [English](README.md) · 🇷🇺 [Русский](README-RU.md)
+🇷🇺 [Русский (por defecto)](README.md) · 🇬🇧 [English](README-EN.md)
 
 ## 🚀 [PROBAR AHORA](https://agenticaijs.github.io/morse-practice-ru/)
 
 > Sin instalación · Sin registro · 100 % gratis · **Funciona totalmente offline** después de la primera carga.
+> Se puede instalar como PWA en la pantalla de inicio y abrir sin internet.
 
 Este es un fork de [**ZP5DXS/morse-practice**](https://github.com/ZP5DXS/morse-practice) de Mathias Maidana (ZP5DXS).  
 La interfaz original es inglés + español. Este fork añade interfaz en ruso y soporte del alfabeto Morse ruso.  
@@ -27,9 +28,9 @@ El proyecto original sigue bajo licencia MIT (ver [LICENSE](LICENSE)).
 
 ### Uso del modo ruso
 
-1. Abre el [entrenador](https://agenticaijs.github.io/morse-practice-ru/).
-2. Pulsa **RU** para la interfaz en ruso.
-3. Cambia **A–Z ⇄ А–Я** a **А–Я** para practicar en cirílico.
+1. Abre el [entrenador](https://agenticaijs.github.io/morse-practice-ru/) — el idioma por defecto es el ruso.
+2. Cambia el idioma con los botones **RU / EN / ES** en la cabecera.
+3. Al seleccionar ruso, el alfabeto cambia automáticamente a **А–Я** (usa el conmutador **A–Z ⇄ А–Я** para volver al latino).
 4. El botón **📋** muestra la tabla Latin ↔ Ruso.
 
 ### Qué sigue funcionando offline
@@ -51,7 +52,7 @@ El proyecto original sigue bajo licencia MIT (ver [LICENSE](LICENSE)).
 - ON AIR y DUEL en red  
 - Cualquier llamada a `practice-api.zp5dxs.org` o brokers MQTT públicos  
 
-El archivo `server-vps.js` se conserva solo como referencia; **no se usa** en esta compilación.
+El archivo `server-vps.js` se ha eliminado del repositorio — el frontend estático no necesita servidor.
 
 ---
 
