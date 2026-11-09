@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zp5dxs.github.io/morse-practice/sitemap.xml
+Sitemap: https://agenticaijs.github.io/morse-practice-ru/sitemap.xml
