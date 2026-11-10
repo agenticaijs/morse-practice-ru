@@ -5,7 +5,7 @@
    новую версию index.html в фоне (stale-while-revalidate для главной страницы).
 */
 
-const CACHE_VERSION = 'morse-practice-ru-v1';
+const CACHE_VERSION = 'morse-practice-ru-v4';
 const CORE_ASSETS = [
   './',
   './index.html',

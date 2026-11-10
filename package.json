@@ -1,6 +1,6 @@
 {
   "name": "morse-practice-ru",
-  "version": "1.1.0-offline",
+  "version": "1.4.0-offline",
   "description": "Offline Morse code / CW trainer with Russian alphabet support. Fork of ZP5DXS/morse-practice.",
   "private": true,
   "license": "MIT",
